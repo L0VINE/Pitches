@@ -4,7 +4,7 @@ from flask import abort
 from flask_login import login_required,current_user
 from ..models import Pitches, User, Comments
 from . import main
-from .. import db,photos
+from .. import db
 from .forms import PitchForm,CommentForm, UpdateProfile
 
 @main.route('/')
@@ -79,16 +79,16 @@ def update_profile(uname):
 
     return render_template('profile/update.html',form =form)
 
-@main.route('/user/<uname>/update/pic',methods= ['POST'])
-@login_required
-def update_pic(uname):
-    user = User.query.filter_by(author = uname).first()
-    if 'photo' in request.files:
-        filename = photos.save(request.files['photo'])
-        path = f'photos/{filename}'
-        user.profile_pic_path = path
-        db.session.commit()
-    return redirect(url_for('main.profile',uname=uname))
+# @main.route('/user/<uname>/update/pic',methods= ['POST'])
+# @login_required
+# def update_pic(uname):
+#     user = User.query.filter_by(author = uname).first()
+#     if 'photo' in request.files:
+#         filename = photos.save(request.files['photo'])
+#         path = f'photos/{filename}'
+#         user.profile_pic_path = path
+#         db.session.commit()
+#     return redirect(url_for('main.profile',uname=uname))
 
 @main.route('/comments/<id>')
 @login_required

@@ -2,8 +2,8 @@ import os
 
 class Config:
 
-    SECRET_KEY=os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://emdee:arif@123@localhost/pitches'
+    SECRET_KEY=os.environ.get('SECRET_KEY') or 'hard string to debug'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringaschool:Access@localhost/pitchee'
 
 
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -14,7 +14,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SUBJECT_PREFIX = 'Pitch It Up!'
+    SUBJECT_PREFIX = 'Pitched!'
     SENDER_EMAIL = 'cynthialovin97@gmail.com'
 
     @staticmethod
@@ -29,9 +29,10 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    pass
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://emdee:arif@123@localhost/pitches_test'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringaschool:Access@localhost/pitchee'
 
 
 class DevConfig(Config):
@@ -40,7 +41,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://emdee:arif@123@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringaschool:Access@localhost/pitchee'
 
     DEBUG = True
 

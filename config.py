@@ -15,7 +15,7 @@ class Config:
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     SUBJECT_PREFIX = 'Pitch It Up!'
-    SENDER_EMAIL = 'staremdee@gmail.com'
+    SENDER_EMAIL = 'cynthialovin97@gmail.com'
 
     @staticmethod
     def init_app(app):

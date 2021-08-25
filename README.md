@@ -35,9 +35,9 @@ As a user I would like to:
 ## Running the Application
 ### Creating the virtual environment
 
- $ python3.8 -m venv --without-pip virtual
- $ source virtual/bin/env
- $ curl https://bootstrap.pypa.io/get-pip.py | python
+ * $ python3.8 -m venv --without-pip virtual
+ * $ source virtual/bin/env
+ * $ curl https://bootstrap.pypa.io/get-pip.py | python
 
  ## Installing Flask and other Modules
 
@@ -46,8 +46,8 @@ As a user I would like to:
 
 ### To run the application, in your terminal:
 
-  $ chmod +x start.sh
-  $ ./start.sh
+  * $ chmod +x start.sh
+  * $ ./start.sh
 
 ## Testing the Application
 ### To run the tests for the class files:

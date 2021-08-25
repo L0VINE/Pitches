@@ -5,7 +5,7 @@
   .crds{
     position:absolute;
     left:50%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
     font-size: size 60px;
   }

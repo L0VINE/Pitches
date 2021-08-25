@@ -31,7 +31,7 @@ As a user I would like to:
 ### In your terminal:
 
  * $ git clone https://github.com/emdeechege/peech/
- * $ cd peech
+ * $ cd pitches
 ## Running the Application
 ### Creating the virtual environment
 

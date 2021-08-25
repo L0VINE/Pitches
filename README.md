@@ -30,7 +30,7 @@ As a user I would like to:
 
 ### In your terminal:
 
- * $ git clone https://github.com/emdeechege/peech/
+ * $ git clone https://github.com/L0VINE/Pitches.git
  * $ cd pitches
 ## Running the Application
 ### Creating the virtual environment
@@ -41,8 +41,10 @@ As a user I would like to:
 
  ## Installing Flask and other Modules
 
-  $ see Requirements.txt
- ###To run the application, in your terminal:
+ 
+ $ see Requirements.txt
+
+### To run the application, in your terminal:
 
   $ chmod +x start.sh
   $ ./start.sh

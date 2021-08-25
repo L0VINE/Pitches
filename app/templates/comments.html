@@ -8,13 +8,13 @@
 <body>
   {% for comm in comment[::-1] %}
   <div class="container">
-    <div class="card-groups">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">{{comm.author}}</h4>
-          <p class="card-text">{{comm.comment}}.</p>
+    <div class="panel-groups">
+      <div class="panel panel-success">
+        <div class="panel-body">
+          <h4 class="panel-title">{{comm.author}}</h4>
+          <p class="panel-text">{{comm.comment}}.</p>
         </div>
-        <div class="card-footer bg-transparent border-success"><small class="text-muted">Publish date:{{comm.date_posted.strftime('%Y-%m-%d')}}</small></div>
+        <div class="panel-footer bg-transparent border-success"><small class="text-muted">Publish date:{{comm.date_posted.strftime('%Y-%m-%d')}}</small></div>
       </div>
     </div>
   </div>
